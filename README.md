@@ -61,9 +61,16 @@ pytest -q                   # 6 tests
 Replace the signal function with your own rule (it just returns a boolean array, one value per bar), load your OHLC data into a DataFrame with `open, high, low, close` columns, and run the same engine, baseline and stats.
 
 ---
+## Roadmap
 
-Built by **Sahil T.**, trading software developer (MT4/MT5, MQL5, Python). I build Expert Advisors and prop-firm risk managers, and audit backtests for look-ahead bias and real costs.
+- [ ] Load real OHLC data from CSV, with validation (missing bars, bad prices, duplicate timestamps)
+- [ ] Walk-forward testing: tune on one period, test on the next
+- [ ] More example rules (breakouts, moving-average crosses) in buggy vs causal form
+- [ ] A single-file HTML audit report
+- [ ] A command-line tool: `python -m audit run --data my_data.csv`
+- [ ] Type hints, docstrings and wider test coverage
 
-*This is software for testing strategies. It is not financial advice and makes no profit claims.*
+---
+Built by **Sahil T.**, strategy tester and Python developer. I audit trading backtests for look-ahead bias, unrealistic execution and real costs, building tools with AI-assisted development.
 
 **License:** All rights reserved. Published for viewing and evaluation only; see [LICENSE](LICENSE). For custom work or licensing, contact me via Upwork or Fiverr.
